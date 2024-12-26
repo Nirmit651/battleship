@@ -1,5 +1,2 @@
-!.gitignore
-!dist/
-!package.json
-!package-lock.json
-!.github/
+src/
+node_modules/
