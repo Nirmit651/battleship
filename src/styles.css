@@ -1,0 +1,159 @@
+/* Basic styling with a navy-inspired theme */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: center;
+  background-color: #0b2742; /* Navy background */
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 1rem;
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+/* Board Container */
+.board-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+.b1,
+.b2 {
+  background-color: #133b5c;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  min-width: 300px;
+  margin-bottom: 1rem;
+}
+
+/* Board & Cells */
+.board {
+  pointer-events: auto;
+  display: inline-block;
+  background-color: #1e5f74;
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+.board.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  background-color: #3aafbf;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid #e2e2e2;
+  width: 32px;
+  height: 32px;
+  margin: 1px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.cell:hover {
+  background-color: #56c4d9;
+}
+
+/* Hits & Misses */
+.hit {
+  background-color: #d9534f !important;
+  border-color: #b52d2a !important;
+}
+.miss {
+  background-color: #848484 !important;
+  border-color: #666 !important;
+}
+
+/* Overlays for mode selection, pass screen, etc. */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.65);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Common modal style => text black to avoid white on white */
+.mode-modal,
+.pass-device-modal,
+.endgame-modal {
+  background-color: #fff;
+  color: #000;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  min-height: 120px;
+  min-width: 280px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.mode-button,
+.pass-button,
+.endgame-button {
+  background-color: #1e5f74;
+  border: none;
+  border-radius: 4px;
+  height: 36px;
+  width: 140px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s;
+}
+.mode-button:hover,
+.pass-button:hover,
+.endgame-button:hover {
+  background-color: #3aafbf;
+}
+
+/* Turn Indicator */
+.turn-text {
+  color: #fff;
+  background-color: #1e5f74;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin: 1rem auto;
+  display: inline-block;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  font-size: 1.2rem;
+}
+
+/* Ship Placement UI panel => text black */
+.shipPlacementUI {
+  background-color: #fff;
+  color: #000;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0 auto 1rem auto;
+  width: 280px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.shipPlacementUI h2 {
+  color: #000;
+}
+.shipPlacementUI p {
+  color: #000;
+}
